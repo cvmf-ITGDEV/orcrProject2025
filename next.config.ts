@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  turbopack: {},
+// const nextConfig: NextConfig = {
+//   turbopack: {},
+// };
+
+// export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    turbo: false
+  }
 };
 
-export default nextConfig;
+module.exports = nextConfig;
