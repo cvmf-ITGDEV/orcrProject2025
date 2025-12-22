@@ -3,17 +3,12 @@ import { verifyPassword, createToken, setAuthCookie } from '@/lib/auth';
 import prisma from '@/lib/db';
 import { Role } from '@/types';
 
-export const dynamic = 'force-dynamic';
-
 export async function POST(request: NextRequest) {
   try {
     const { email, password } = await request.json();
 
     if (!email || !password) {
-      return NextResponse.json(
-        { error: 'Email and password are required' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Email and password are required' }, { status: 400 });
     }
 
     const user = await prisma.user.findUnique({
@@ -21,10 +16,7 @@ export async function POST(request: NextRequest) {
     });
 
     if (!user) {
-      return NextResponse.json(
-        { error: 'Invalid email or password' },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 });
     }
 
     if (!user.isActive) {
@@ -36,10 +28,7 @@ export async function POST(request: NextRequest) {
 
     const isValidPassword = await verifyPassword(password, user.password);
     if (!isValidPassword) {
-      return NextResponse.json(
-        { error: 'Invalid email or password' },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 });  
     }
 
     const token = await createToken({
@@ -65,9 +54,6 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error('Login error:', error);
-    return NextResponse.json(
-      { error: 'An error occurred during login' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'An error occurred during login' }, { status: 500 });
   }
 }
