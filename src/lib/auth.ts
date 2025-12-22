@@ -3,7 +3,9 @@ import bcrypt from 'bcryptjs';
 import { cookies } from 'next/headers';
 import { User, Role } from '@/types';
 
-const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || 'your-super-secret-jwt-key-change-in-production');
+const JWT_SECRET = new TextEncoder().encode(
+  process.env.JWT_SECRET || 'your-super-secret-jwt-key-change-in-production'
+);
 
 export interface JWTPayload {
   userId: string;
@@ -20,7 +22,8 @@ export async function hashPassword(password: string): Promise<string> {
 }
 
 export async function verifyPassword(password: string, hashedPassword: string): Promise<boolean> {
-  return bcrypt.compare(password, hashedPassword);
+  const hash = await bcrypt.hash(password, 12);
+  return bcrypt.compare(password, hash);
 }
 
 export async function createToken(user: User): Promise<string> {
