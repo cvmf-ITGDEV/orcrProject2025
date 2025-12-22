@@ -14,7 +14,6 @@ import {
   TableHead,
   TableRow,
   Chip,
-  Paper,
   Button,
   Skeleton,
   Alert,
@@ -24,7 +23,6 @@ import {
   Receipt as ReceiptIcon,
   CheckCircle as CheckCircleIcon,
   Pending as PendingIcon,
-  Cancel as CancelIcon,
   TrendingUp as TrendingUpIcon,
   Add as AddIcon,
 } from '@mui/icons-material';
@@ -155,7 +153,7 @@ export default function DashboardPage() {
               Dashboard
             </Typography>
             <Typography variant="body1" color="text.secondary">
-              Welcome back! Here's an overview of your loan applications and receipts.
+              Welcome back! Here&apos;s an overview of your loan applications and receipts.
             </Typography>
           </Box>
           <Button
@@ -175,7 +173,7 @@ export default function DashboardPage() {
         )}
 
         <Grid container spacing={3} sx={{ mb: 4 }}>
-          <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
+          <Grid item xs={12} sm={6} lg={3}>
             {loading ? (
               <Skeleton variant="rounded" height={140} />
             ) : (
@@ -188,7 +186,7 @@ export default function DashboardPage() {
               />
             )}
           </Grid>
-          <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
+          <Grid item xs={12} sm={6} lg={3}>
             {loading ? (
               <Skeleton variant="rounded" height={140} />
             ) : (
@@ -201,7 +199,7 @@ export default function DashboardPage() {
               />
             )}
           </Grid>
-          <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
+          <Grid item xs={12} sm={6} lg={3}>
             {loading ? (
               <Skeleton variant="rounded" height={140} />
             ) : (
@@ -214,7 +212,7 @@ export default function DashboardPage() {
               />
             )}
           </Grid>
-          <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
+          <Grid item xs={12} sm={6} lg={3}>
             {loading ? (
               <Skeleton variant="rounded" height={140} />
             ) : (
@@ -230,7 +228,7 @@ export default function DashboardPage() {
         </Grid>
 
         <Grid container spacing={3}>
-          <Grid size={{ xs: 12, lg: 8 }}>
+          <Grid item xs={12} lg={8}>
             <Card>
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
@@ -317,7 +315,7 @@ export default function DashboardPage() {
             </Card>
           </Grid>
 
-          <Grid size={{ xs: 12, lg: 4 }}>
+          <Grid item xs={12} lg={4}>
             <Card sx={{ height: '100%' }}>
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>

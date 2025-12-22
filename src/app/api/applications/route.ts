@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import prisma from '@/lib/db';
-import { v4 as uuidv4 } from 'uuid';
 
 function generateApplicationNumber(): string {
   const year = new Date().getFullYear();

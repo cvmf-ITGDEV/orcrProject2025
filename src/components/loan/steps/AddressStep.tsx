@@ -151,7 +151,7 @@ export default function AddressStep() {
       </Paper>
 
       <Grid container spacing={3}>
-        <Grid size={12}>
+        <Grid item xs={12}>
           <TextField
             fullWidth
             required
@@ -164,7 +164,7 @@ export default function AddressStep() {
           />
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <FormControl fullWidth required error={!!errors.regionId}>
             <InputLabel>Region</InputLabel>
             <Select
@@ -181,7 +181,7 @@ export default function AddressStep() {
           </FormControl>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <FormControl fullWidth required error={!!errors.provinceId} disabled={!formData.regionId}>
             <InputLabel>Province</InputLabel>
             <Select
@@ -198,7 +198,7 @@ export default function AddressStep() {
           </FormControl>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <FormControl fullWidth required error={!!errors.cityId} disabled={!formData.provinceId}>
             <InputLabel>City / Municipality</InputLabel>
             <Select
@@ -215,7 +215,7 @@ export default function AddressStep() {
           </FormControl>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <FormControl fullWidth required error={!!errors.barangayId} disabled={!formData.cityId}>
             <InputLabel>Barangay</InputLabel>
             <Select
@@ -232,7 +232,7 @@ export default function AddressStep() {
           </FormControl>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid item xs={12} sm={6} md={3}>
           <TextField
             fullWidth
             label="ZIP Code"
@@ -264,7 +264,7 @@ export default function AddressStep() {
 
         {!formData.sameAsPresent && (
           <Grid container spacing={3}>
-            <Grid size={12}>
+            <Grid item xs={12}>
               <TextField
                 fullWidth
                 required
@@ -275,7 +275,7 @@ export default function AddressStep() {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <FormControl fullWidth required>
                 <InputLabel>Region</InputLabel>
                 <Select
@@ -292,7 +292,7 @@ export default function AddressStep() {
               </FormControl>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <FormControl fullWidth required disabled={!formData.permanentRegionId}>
                 <InputLabel>Province</InputLabel>
                 <Select
@@ -309,7 +309,7 @@ export default function AddressStep() {
               </FormControl>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <FormControl fullWidth required disabled={!formData.permanentProvinceId}>
                 <InputLabel>City / Municipality</InputLabel>
                 <Select
@@ -326,7 +326,7 @@ export default function AddressStep() {
               </FormControl>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <FormControl fullWidth required disabled={!formData.permanentCityId}>
                 <InputLabel>Barangay</InputLabel>
                 <Select
@@ -343,7 +343,7 @@ export default function AddressStep() {
               </FormControl>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+            <Grid item xs={12} sm={6} md={3}>
               <TextField
                 fullWidth
                 label="ZIP Code"

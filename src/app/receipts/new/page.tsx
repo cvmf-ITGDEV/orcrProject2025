@@ -177,7 +177,7 @@ function NewReceiptContent() {
           </Box>
 
           <Grid container spacing={3}>
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <FormControl fullWidth required>
                 <InputLabel>Receipt Type</InputLabel>
                 <Select
@@ -196,7 +196,7 @@ function NewReceiptContent() {
               </FormControl>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
                 required
@@ -211,7 +211,7 @@ function NewReceiptContent() {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <FormControl fullWidth required>
                 <InputLabel>Payment Method</InputLabel>
                 <Select
@@ -230,7 +230,7 @@ function NewReceiptContent() {
               </FormControl>
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="Payment Details"
@@ -240,7 +240,7 @@ function NewReceiptContent() {
               />
             </Grid>
 
-            <Grid size={12}>
+            <Grid item xs={12}>
               <TextField
                 fullWidth
                 required
@@ -259,7 +259,7 @@ function NewReceiptContent() {
           </Typography>
 
           <Grid container spacing={3}>
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
                 required
@@ -269,7 +269,7 @@ function NewReceiptContent() {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
                 label="Payer Address"
@@ -278,7 +278,7 @@ function NewReceiptContent() {
               />
             </Grid>
 
-            <Grid size={12}>
+            <Grid item xs={12}>
               <TextField
                 fullWidth
                 multiline

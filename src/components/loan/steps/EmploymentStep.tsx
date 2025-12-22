@@ -47,7 +47,7 @@ export default function EmploymentStep() {
       </Paper>
 
       <Grid container spacing={3}>
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <FormControl fullWidth required error={!!errors.employmentStatus}>
             <InputLabel>Employment Status</InputLabel>
             <Select
@@ -66,7 +66,7 @@ export default function EmploymentStep() {
 
         {isEmployed && (
           <>
-            <Grid size={{ xs: 12, sm: 6 }}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 fullWidth
                 required
@@ -85,7 +85,7 @@ export default function EmploymentStep() {
               />
             </Grid>
 
-            <Grid size={12}>
+            <Grid item xs={12}>
               <TextField
                 fullWidth
                 label="Employer / Business Address"
@@ -95,7 +95,7 @@ export default function EmploymentStep() {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <Grid item xs={12} sm={6} md={4}>
               <TextField
                 fullWidth
                 required
@@ -107,7 +107,7 @@ export default function EmploymentStep() {
               />
             </Grid>
 
-            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <Grid item xs={12} sm={6} md={4}>
               <TextField
                 fullWidth
                 label="Years Employed"
@@ -122,7 +122,7 @@ export default function EmploymentStep() {
           </>
         )}
 
-        <Grid size={12}>
+        <Grid item xs={12}>
           <Paper elevation={0} sx={{ p: 3, mt: 2, mb: 2, backgroundColor: 'grey.100', borderRadius: 2 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
               <MoneyIcon color="primary" />
@@ -136,7 +136,7 @@ export default function EmploymentStep() {
           </Paper>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Grid item xs={12} sm={6} md={4}>
           <TextField
             fullWidth
             required
@@ -153,7 +153,7 @@ export default function EmploymentStep() {
           />
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Grid item xs={12} sm={6} md={4}>
           <TextField
             fullWidth
             label="Other Income"
@@ -168,7 +168,7 @@ export default function EmploymentStep() {
           />
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Grid item xs={12} sm={6} md={4}>
           <TextField
             fullWidth
             label="Source of Other Income"
@@ -179,7 +179,7 @@ export default function EmploymentStep() {
           />
         </Grid>
 
-        <Grid size={12}>
+        <Grid item xs={12}>
           <Box
             sx={{
               p: 2,

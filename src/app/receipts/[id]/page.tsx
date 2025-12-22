@@ -175,7 +175,7 @@ export default function ReceiptDetailPage() {
         </Box>
 
         <Grid container spacing={4}>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <Typography variant="subtitle2" color="text.secondary" gutterBottom>
               Payer Information
             </Typography>
@@ -197,7 +197,7 @@ export default function ReceiptDetailPage() {
             </Table>
           </Grid>
 
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <Typography variant="subtitle2" color="text.secondary" gutterBottom>
               Payment Details
             </Typography>

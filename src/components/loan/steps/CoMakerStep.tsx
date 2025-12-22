@@ -52,7 +52,7 @@ export default function CoMakerStep() {
       </Alert>
 
       <Grid container spacing={3}>
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
             label="Co-Maker Full Name"
@@ -70,7 +70,7 @@ export default function CoMakerStep() {
           />
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
             label="Relationship to Applicant"
@@ -80,7 +80,7 @@ export default function CoMakerStep() {
           />
         </Grid>
 
-        <Grid size={12}>
+        <Grid item xs={12}>
           <TextField
             fullWidth
             label="Co-Maker Address"
@@ -90,7 +90,7 @@ export default function CoMakerStep() {
           />
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
             label="Co-Maker Contact Number"
@@ -112,7 +112,7 @@ export default function CoMakerStep() {
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
           <BadgeIcon color="primary" />
           <Typography variant="subtitle1" fontWeight={600} color="text.primary">
-            Applicant's Valid ID
+            Applicant&apos;s Valid ID
           </Typography>
         </Box>
         <Typography variant="body2" color="text.secondary">
@@ -121,7 +121,7 @@ export default function CoMakerStep() {
       </Paper>
 
       <Grid container spacing={3}>
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <FormControl fullWidth>
             <InputLabel>Valid ID Type</InputLabel>
             <Select
@@ -138,7 +138,7 @@ export default function CoMakerStep() {
           </FormControl>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid item xs={12} sm={6} md={3}>
           <TextField
             fullWidth
             label="ID Number"
@@ -147,7 +147,7 @@ export default function CoMakerStep() {
           />
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid item xs={12} sm={6} md={3}>
           <TextField
             fullWidth
             label="ID Expiry Date"

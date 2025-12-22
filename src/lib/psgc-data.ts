@@ -285,7 +285,6 @@ export function getFullAddress(barangayId: string, streetAddress?: string): stri
   const province = getProvinceById(city.provinceId);
   if (!province) return `${streetAddress || ''}, ${barangay.name}, ${city.name}`;
 
-  const region = getRegionById(province.regionId);
   const parts = [streetAddress, barangay.name, city.name, province.name].filter(Boolean);
 
   return parts.join(', ');

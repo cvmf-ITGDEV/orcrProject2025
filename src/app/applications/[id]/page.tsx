@@ -329,7 +329,7 @@ export default function ApplicationDetailPage() {
       </Paper>
 
       <Grid container spacing={3}>
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid item xs={12} md={6}>
           <Paper sx={{ p: 3, height: '100%' }}>
             <Typography variant="h6" fontWeight={600} gutterBottom>
               Personal Information
@@ -387,7 +387,7 @@ export default function ApplicationDetailPage() {
           </Paper>
         </Grid>
 
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid item xs={12} md={6}>
           <Paper sx={{ p: 3, height: '100%' }}>
             <Typography variant="h6" fontWeight={600} gutterBottom>
               Employment & Income
@@ -436,14 +436,14 @@ export default function ApplicationDetailPage() {
           </Paper>
         </Grid>
 
-        <Grid size={12}>
+        <Grid item xs={12}>
           <Paper sx={{ p: 3 }}>
             <Typography variant="h6" fontWeight={600} gutterBottom>
               Loan Details
             </Typography>
             <Divider sx={{ mb: 2 }} />
             <Grid container spacing={3}>
-              <Grid size={{ xs: 6, sm: 3 }}>
+              <Grid item xs={6} sm={3}>
                 <Typography variant="caption" color="text.secondary">
                   Loan Purpose
                 </Typography>
@@ -451,7 +451,7 @@ export default function ApplicationDetailPage() {
                   {application.loanPurpose}
                 </Typography>
               </Grid>
-              <Grid size={{ xs: 6, sm: 3 }}>
+              <Grid item xs={6} sm={3}>
                 <Typography variant="caption" color="text.secondary">
                   Loan Amount
                 </Typography>
@@ -459,7 +459,7 @@ export default function ApplicationDetailPage() {
                   PHP {Number(application.loanAmount).toLocaleString()}
                 </Typography>
               </Grid>
-              <Grid size={{ xs: 6, sm: 3 }}>
+              <Grid item xs={6} sm={3}>
                 <Typography variant="caption" color="text.secondary">
                   Term
                 </Typography>
@@ -467,7 +467,7 @@ export default function ApplicationDetailPage() {
                   {application.loanTerm} months
                 </Typography>
               </Grid>
-              <Grid size={{ xs: 6, sm: 3 }}>
+              <Grid item xs={6} sm={3}>
                 <Typography variant="caption" color="text.secondary">
                   Interest Rate
                 </Typography>
@@ -475,7 +475,7 @@ export default function ApplicationDetailPage() {
                   {Number(application.interestRate)}% p.a.
                 </Typography>
               </Grid>
-              <Grid size={{ xs: 6, sm: 3 }}>
+              <Grid item xs={6} sm={3}>
                 <Typography variant="caption" color="text.secondary">
                   Monthly Payment
                 </Typography>

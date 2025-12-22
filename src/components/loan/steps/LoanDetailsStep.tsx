@@ -33,7 +33,6 @@ export default function LoanDetailsStep() {
     const rate = parseFloat(formData.interestRate) || 0;
     const term = parseInt(formData.loanTerm) || 1;
 
-    const monthlyRate = rate / 100 / 12;
     const totalInterest = principal * (rate / 100) * (term / 12);
     const totalAmount = principal + totalInterest;
     const monthlyPayment = totalAmount / term;
@@ -68,7 +67,7 @@ export default function LoanDetailsStep() {
       </Paper>
 
       <Grid container spacing={3}>
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <FormControl fullWidth required error={!!errors.loanPurpose}>
             <InputLabel>Loan Purpose</InputLabel>
             <Select
@@ -85,7 +84,7 @@ export default function LoanDetailsStep() {
           </FormControl>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
             required
@@ -102,7 +101,7 @@ export default function LoanDetailsStep() {
           />
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <FormControl fullWidth required error={!!errors.loanTerm}>
             <InputLabel>Loan Term (Months)</InputLabel>
             <Select
@@ -119,7 +118,7 @@ export default function LoanDetailsStep() {
           </FormControl>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <Box sx={{ px: 2 }}>
             <Typography variant="body2" color="text.secondary" gutterBottom>
               Interest Rate: {formData.interestRate}% per annum
@@ -142,7 +141,7 @@ export default function LoanDetailsStep() {
           </Box>
         </Grid>
 
-        <Grid size={12}>
+        <Grid item xs={12}>
           <Paper
             elevation={0}
             sx={{

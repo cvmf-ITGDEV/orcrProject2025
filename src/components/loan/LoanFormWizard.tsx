@@ -9,7 +9,6 @@ import {
   StepLabel,
   Button,
   Paper,
-  Typography,
   CircularProgress,
   Alert,
   Dialog,

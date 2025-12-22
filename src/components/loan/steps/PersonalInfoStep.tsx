@@ -38,7 +38,7 @@ export default function PersonalInfoStep() {
       </Typography>
 
       <Grid container spacing={3}>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid item xs={12} sm={6} md={3}>
           <TextField
             fullWidth
             required
@@ -56,7 +56,7 @@ export default function PersonalInfoStep() {
             }}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid item xs={12} sm={6} md={3}>
           <TextField
             fullWidth
             label="Middle Name"
@@ -64,7 +64,7 @@ export default function PersonalInfoStep() {
             onChange={handleChange('middleName')}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid item xs={12} sm={6} md={3}>
           <TextField
             fullWidth
             required
@@ -75,7 +75,7 @@ export default function PersonalInfoStep() {
             helperText={errors.lastName}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid item xs={12} sm={6} md={3}>
           <TextField
             fullWidth
             label="Suffix"
@@ -85,7 +85,7 @@ export default function PersonalInfoStep() {
           />
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Grid item xs={12} sm={6} md={4}>
           <TextField
             fullWidth
             required
@@ -101,7 +101,7 @@ export default function PersonalInfoStep() {
             }}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Grid item xs={12} sm={6} md={4}>
           <FormControl fullWidth required error={!!errors.gender}>
             <InputLabel>Gender</InputLabel>
             <Select
@@ -117,7 +117,7 @@ export default function PersonalInfoStep() {
             </Select>
           </FormControl>
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Grid item xs={12} sm={6} md={4}>
           <FormControl fullWidth required error={!!errors.civilStatus}>
             <InputLabel>Civil Status</InputLabel>
             <Select
@@ -134,7 +134,7 @@ export default function PersonalInfoStep() {
           </FormControl>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
             label="Nationality"
@@ -143,13 +143,13 @@ export default function PersonalInfoStep() {
           />
         </Grid>
 
-        <Grid size={12}>
+        <Grid item xs={12}>
           <Typography variant="subtitle2" color="text.secondary" sx={{ mt: 2, mb: 1 }}>
             Contact Information
           </Typography>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6 }}>
+        <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
             label="Email Address"
@@ -167,7 +167,7 @@ export default function PersonalInfoStep() {
             }}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid item xs={12} sm={6} md={3}>
           <TextField
             fullWidth
             required
@@ -186,7 +186,7 @@ export default function PersonalInfoStep() {
             }}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid item xs={12} sm={6} md={3}>
           <TextField
             fullWidth
             label="Telephone Number"

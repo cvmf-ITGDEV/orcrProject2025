@@ -11,7 +11,6 @@ import {
   TableBody,
   TableCell,
   TableRow,
-  Chip,
   Alert,
 } from '@mui/material';
 import {
@@ -20,7 +19,6 @@ import {
   Work as WorkIcon,
   AccountBalance as LoanIcon,
   People as PeopleIcon,
-  Badge as BadgeIcon,
   CheckCircle as CheckIcon,
 } from '@mui/icons-material';
 import { useLoanForm } from '../LoanFormContext';
@@ -148,7 +146,7 @@ export default function ReviewStep() {
       </Alert>
 
       <Grid container spacing={3}>
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid item xs={12} md={6}>
           <Section title="Personal Information" icon={<PersonIcon color="primary" />}>
             <Table size="small">
               <TableBody>
@@ -209,7 +207,7 @@ export default function ReviewStep() {
           </Section>
         </Grid>
 
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid item xs={12} md={6}>
           <Section title="Employment & Income" icon={<WorkIcon color="primary" />}>
             <Table size="small">
               <TableBody>
@@ -259,7 +257,7 @@ export default function ReviewStep() {
               }}
             >
               <Grid container spacing={2}>
-                <Grid size={6}>
+                <Grid item xs={6}>
                   <Typography variant="caption" sx={{ opacity: 0.8 }}>
                     Total Interest
                   </Typography>
@@ -267,7 +265,7 @@ export default function ReviewStep() {
                     PHP {loanCalculation.totalInterest.toLocaleString(undefined, { maximumFractionDigits: 2 })}
                   </Typography>
                 </Grid>
-                <Grid size={6}>
+                <Grid item xs={6}>
                   <Typography variant="caption" sx={{ opacity: 0.8 }}>
                     Total Payable
                   </Typography>
