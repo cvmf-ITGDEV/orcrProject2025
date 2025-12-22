@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import prisma from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+
 function generateApplicationNumber(): string {
   const year = new Date().getFullYear();
   const random = Math.floor(Math.random() * 100000).toString().padStart(5, '0');

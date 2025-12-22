@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth';
 import prisma from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+
 function generateReceiptNumber(type: 'OFFICIAL_RECEIPT' | 'COLLECTION_RECEIPT'): string {
   const prefix = type === 'OFFICIAL_RECEIPT' ? 'OR' : 'CR';
   const year = new Date().getFullYear();
